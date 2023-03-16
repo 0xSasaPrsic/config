@@ -12,13 +12,13 @@
           "type": "default"
         },
         "enabled": false,
-        "interval": 2000
+        "interval": 500
       },
       "logging": {
         "fmt": "json",
         "level": "info"
       },
-      "metrics": 9090,
+      "metrics": 9095,
       "processor": {
         "allowed": null,
         "denied": null,
@@ -46,20 +46,22 @@
         "chat": {
           "type": "default"
         },
-        "enabled": false,
-        "interval": 2000
+        "enabled": true,
+        "interval": 20
       },
       "logging": {
         "fmt": "json",
         "level": "info"
       },
-      "metrics": 9090,
+      "metrics": 9096,
       "processor": {
         "allowed": null,
         "denied": null,
         "enabled": true,
         "interval": 5,
-        "subsidizedRemotes": []
+        "subsidizedRemotes": [
+          "goerli"
+        ]
       },
       "relayer": {
         "enabled": true,
@@ -84,7 +86,13 @@
         "proxy": "0x0000000000000000000000000000000000000000"
       },
       "customs": [],
-      "deployHeight": 7960552
+      "deployHeight": 0,
+      "ethHelper": "0x0000000000000000000000000000000000000000",
+      "tokenRegistry": {
+        "beacon": "0x0000000000000000000000000000000000000000",
+        "implementation": "0x0000000000000000000000000000000000000000",
+        "proxy": "0x0000000000000000000000000000000000000000"
+      }
     },
     "avail": {
       "deployHeight": 0
@@ -93,7 +101,7 @@
   "bridgeGui": {},
   "core": {
     "goerli": {
-      "deployHeight": 7960504,
+      "deployHeight": 0,
       "governanceRouter": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
@@ -121,41 +129,7 @@
   },
   "environment": "development",
   "gas": {
-    "goerli": {
-      "bridge": {
-        "bridgeRouter": {
-          "send": 500000
-        },
-        "ethHelper": {
-          "send": 800000,
-          "sendToEvmLike": 800000
-        }
-      },
-      "core": {
-        "connectionManager": {
-          "ownerUnenrollReplica": 120000,
-          "unenrollReplica": 120000
-        },
-        "home": {
-          "doubleUpdate": 200000,
-          "improperUpdate": {
-            "base": 100000,
-            "perMessage": 10000
-          },
-          "update": {
-            "base": 100000,
-            "perMessage": 10000
-          }
-        },
-        "replica": {
-          "doubleUpdate": 200000,
-          "process": 1700000,
-          "prove": 200000,
-          "proveAndProcess": 1900000,
-          "update": 140000
-        }
-      }
-    }
+    "goerli": "evmDefault"
   },
   "protocol": {
     "governor": {
@@ -168,14 +142,17 @@
           "customs": [],
           "deployGas": 85000000,
           "mintGas": 20000000,
-          "weth": "0x0000000000000000000000000000000000000000"
+          "weth": "0x0bb7509324ce409f7bbc4b701f932eaca9736ab7"
         },
         "configuration": {
           "governance": {
-            "recoveryManager": "0x0000000000000000000000000000000000000000",
+            "recoveryManager": "0xa4849f1d96b26066f9c631fcdc8f1457d27fb5ec",
             "recoveryTimelock": 180
           },
+          "maximumGas": 100000000,
           "optimisticSeconds": 5,
+          "processGas": 85000000,
+          "reserveGas": 1500000,
           "updater": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
           "watchers": [
             "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
@@ -201,7 +178,7 @@
           "goerli"
         ],
         "configuration": {
-          "optimisticSeconds": 1800,
+          "optimisticSeconds": 5,
           "updater": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
           "watchers": [
             "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
