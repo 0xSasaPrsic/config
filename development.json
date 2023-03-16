@@ -6,11 +6,12 @@
   ],
   "agent": {
     "goerli": {
+      "db": "db",
       "kathy": {
         "chat": {
           "type": "default"
         },
-        "enabled": true,
+        "enabled": false,
         "interval": 2000
       },
       "logging": {
@@ -40,11 +41,12 @@
       }
     },
     "avail": {
+      "db": "db",
       "kathy": {
         "chat": {
           "type": "default"
         },
-        "enabled": true,
+        "enabled": false,
         "interval": 2000
       },
       "logging": {
@@ -112,9 +114,12 @@
       "updaterManager": "0x0000000000000000000000000000000000000000",
       "upgradeBeaconController": "0x0000000000000000000000000000000000000000",
       "xAppConnectionManager": "0x0000000000000000000000000000000000000000"
+    },
+    "avail": {
+      "deployHeight": 0
     }
   },
-  "environment": "staging",
+  "environment": "development",
   "gas": {
     "goerli": {
       "bridge": {
@@ -154,30 +159,30 @@
   },
   "protocol": {
     "governor": {
-      "domain": 1337,
+      "domain": 1000,
       "id": "0x0000000000000000000000000000000000000000"
     },
     "networks": {
       "goerli": {
         "bridgeConfiguration": {
           "customs": [],
-          "weth": "0x0bb7509324ce409f7bbc4b701f932eaca9736ab7"
+          "deployGas": 85000000,
+          "mintGas": 20000000,
+          "weth": "0x0000000000000000000000000000000000000000"
         },
         "configuration": {
           "governance": {
             "recoveryManager": "0x0000000000000000000000000000000000000000",
             "recoveryTimelock": 180
           },
-          "optimisticSeconds": 1800,
-          "updater": "0x0000000000000000000000000000000000000000",
+          "optimisticSeconds": 5,
+          "updater": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
           "watchers": [
-            "0x0000000000000000000000000000000000000000"
+            "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
           ]
         },
-        "connections": [
-          "avail"
-        ],
-        "domain": 1337,
+        "connections": [],
+        "domain": 1000,
         "name": "goerli",
         "specs": {
           "blockExplorer": "https://goerli.etherscan.io/",
@@ -188,17 +193,48 @@
           "indexPageSize": 2000,
           "supports1559": true
         }
+      },
+      "avail": {
+        "name": "avail",
+        "domain": 2000,
+        "connections": [
+          "goerli"
+        ],
+        "configuration": {
+          "optimisticSeconds": 1800,
+          "updater": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+          "watchers": [
+            "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+          ],
+          "governance": {
+            "recoveryManager": "0x0000000000000000000000000000000000000000",
+            "recoveryTimelock": 86400
+          }
+        },
+        "specs": {
+          "chainId": 9001,
+          "blockTime": 6,
+          "finalizationBlocks": 3,
+          "supports1559": true,
+          "confirmations": 5,
+          "blockExplorer": "https://explorer.polkascan.io/polkadot",
+          "indexPageSize": 200
+        },
+        "bridgeConfiguration": {
+          "weth": "0x0000000000000000000000000000000000000000",
+          "customs": []
+        }
       }
     }
   },
   "rpcs": {
     "goerli": [
-      ""
+      "https://rpc.ankr.com/eth_goerli"
     ],
-    "sepolia": [
-      ""
-    ]
+    "avail": []
   },
   "s3": {
+    "bucket": "",
+    "region": ""
   }
 }
