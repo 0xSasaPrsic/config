@@ -2,7 +2,7 @@
   "version": 0,
   "networks": ["goerli", "avail"],
   "agent": {
-    "goerli": {
+    "sepolia": {
       "db": "db",
       "kathy": {
         "chat": {
@@ -74,14 +74,14 @@
     }
   },
   "bridge": {
-    "goerli": {
+    "sepolia": {
       "bridgeRouter": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
-        "proxy": "0x5563516EE5f6e1b4E9399FaB2Ec4e371552BD19d"
+        "proxy": "0xaAB16A9fb03D5845193e87F596Fa610FCE6054F0"
       },
       "customs": [],
-      "deployHeight": 0,
+      "deployHeight": 3111476,
       "ethHelper": "0x0000000000000000000000000000000000000000",
       "tokenRegistry": {
         "beacon": "0x0000000000000000000000000000000000000000",
@@ -95,8 +95,8 @@
   },
   "bridgeGui": {},
   "core": {
-    "goerli": {
-      "deployHeight": 0,
+    "sepolia": {
+      "deployHeight": 3111476,
       "governanceRouter": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
@@ -105,18 +105,18 @@
       "home": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
-        "proxy": "0x1edBE8a399f49d14e8B9c341394640b80774F359"
+        "proxy": "0x82EC0386B5C4334c5dCd9e465DBADF053D778eDE"
       },
       "replicas": {
         "avail": {
           "beacon": "0x0000000000000000000000000000000000000000",
           "implementation": "0x0000000000000000000000000000000000000000",
-          "proxy": "0x405ADCf236594299909a24D02853A48E17A94141"
+          "proxy": "0xCAbdb0f220B3f73165bc73EB5d32a3b565319fa6"
         }
       },
       "updaterManager": "0x0000000000000000000000000000000000000000",
       "upgradeBeaconController": "0x0000000000000000000000000000000000000000",
-      "xAppConnectionManager": "0xF66eA63C495316d8B38Df586F91AA9f604c0c75C"
+      "xAppConnectionManager": "0x9eE48F2eCaa981217eFDBbB12Af91955A3C5e819"
     },
     "avail": {
       "deployHeight": 0
@@ -124,7 +124,7 @@
   },
   "environment": "development",
   "gas": {
-    "goerli": "evmDefault"
+    "sepolia": "evmDefault"
   },
   "protocol": {
     "governor": {
@@ -132,7 +132,7 @@
       "id": "0x0000000000000000000000000000000000000000"
     },
     "networks": {
-      "goerli": {
+      "sepolia": {
         "bridgeConfiguration": {
           "customs": [],
           "deployGas": 85000000,
@@ -145,17 +145,17 @@
             "recoveryTimelock": 180
           },
           "maximumGas": 100000000,
-          "optimisticSeconds": 5,
+          "optimisticSeconds": 1800,
           "processGas": 85000000,
           "reserveGas": 1500000,
-          "updater": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
-          "watchers": ["0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"]
+          "updater": "0x7eB31daE170c1Cb25A7257524e98273e89F32DdC",
+          "watchers": ["0xf6d83ed2550B121B42C6a6dF828b0Db183223100"]
         },
         "connections": [],
         "domain": 1000,
-        "name": "goerli",
+        "name": "sepolia",
         "specs": {
-          "blockExplorer": "https://goerli.etherscan.io/",
+          "blockExplorer": "https://sepolia.etherscan.io/",
           "blockTime": 15,
           "chainId": 5,
           "confirmations": 4,
@@ -167,11 +167,11 @@
       "avail": {
         "name": "avail",
         "domain": 2000,
-        "connections": ["goerli"],
+        "connections": ["sepolia"],
         "configuration": {
           "optimisticSeconds": 1800,
-          "updater": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
-          "watchers": ["0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"],
+          "updater": "0x7eB31daE170c1Cb25A7257524e98273e89F32DdC",
+          "watchers": ["0xf6d83ed2550B121B42C6a6dF828b0Db183223100"],
           "governance": {
             "recoveryManager": "0x0000000000000000000000000000000000000000",
             "recoveryTimelock": 86400
@@ -194,8 +194,8 @@
     }
   },
   "rpcs": {
-    "goerli": [
-      "https://rpc.ankr.com/eth_goerli"
+    "sepolia": [
+      "https://ethereum-sepolia-rpc.allthatnode.com/"
     ],
     "avail": []
   },
