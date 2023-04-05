@@ -1,6 +1,6 @@
 {
   "version": 0,
-  "networks": ["goerli", "avail"],
+  "networks": ["sepolia", "avail"],
   "agent": {
     "sepolia": {
       "db": "db",
