@@ -43,7 +43,7 @@
         "chat": {
           "type": "default"
         },
-        "enabled": true,
+        "enabled": false,
         "interval": 20
       },
       "logging": {
