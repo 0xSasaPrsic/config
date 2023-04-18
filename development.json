@@ -20,21 +20,21 @@
         "allowed": null,
         "denied": null,
         "enabled": true,
-        "interval": 5,
+        "interval": 20,
         "subsidizedRemotes": []
       },
       "relayer": {
         "enabled": true,
-        "interval": 10
+        "interval": 20
       },
       "rpcStyle": "ethereum",
       "updater": {
         "enabled": true,
-        "interval": 5
+        "interval": 20
       },
       "watcher": {
         "enabled": true,
-        "interval": 5
+        "interval": 20
       }
     },
     "avail": {
@@ -54,22 +54,22 @@
       "processor": {
         "allowed": null,
         "denied": null,
-        "enabled": true,
-        "interval": 5,
+        "enabled": false,
+        "interval": 20,
         "subsidizedRemotes": []
       },
       "relayer": {
-        "enabled": true,
-        "interval": 10
+        "enabled": false,
+        "interval": 20
       },
       "rpcStyle": "substrate",
       "updater": {
-        "enabled": true,
-        "interval": 5
+        "enabled": false,
+        "interval": 20
       },
       "watcher": {
-        "enabled": true,
-        "interval": 5
+        "enabled": false,
+        "interval": 20
       }
     }
   },
