@@ -19,21 +19,21 @@
       "processor": {
         "allowed": null,
         "denied": null,
-        "enabled": true,
+        "enabled": false,
         "interval": 20,
         "subsidizedRemotes": []
       },
       "relayer": {
-        "enabled": true,
+        "enabled": false,
         "interval": 20
       },
       "rpcStyle": "ethereum",
       "updater": {
-        "enabled": true,
+        "enabled": false,
         "interval": 20
       },
       "watcher": {
-        "enabled": true,
+        "enabled": false,
         "interval": 20
       }
     },
@@ -54,21 +54,21 @@
       "processor": {
         "allowed": null,
         "denied": null,
-        "enabled": false,
+        "enabled": true,
         "interval": 20,
-        "subsidizedRemotes": []
+        "subsidizedRemotes": ["sepolia"]
       },
       "relayer": {
-        "enabled": false,
+        "enabled": true,
         "interval": 20
       },
       "rpcStyle": "substrate",
       "updater": {
-        "enabled": false,
+        "enabled": true,
         "interval": 20
       },
       "watcher": {
-        "enabled": false,
+        "enabled": true,
         "interval": 20
       }
     }
@@ -81,7 +81,7 @@
         "proxy": "0xaAB16A9fb03D5845193e87F596Fa610FCE6054F0"
       },
       "customs": [],
-      "deployHeight": 3127510,
+      "deployHeight": 3364020,
       "ethHelper": "0x0000000000000000000000000000000000000000",
       "tokenRegistry": {
         "beacon": "0x0000000000000000000000000000000000000000",
@@ -90,13 +90,13 @@
       }
     },
     "avail": {
-      "deployHeight": 0
+      "deployHeight":2250
     }
   },
   "bridgeGui": {},
   "core": {
     "sepolia": {
-      "deployHeight": 3127510,
+      "deployHeight": 3364020,
       "governanceRouter": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
@@ -119,7 +119,7 @@
       "xAppConnectionManager": "0x9eE48F2eCaa981217eFDBbB12Af91955A3C5e819"
     },
     "avail": {
-      "deployHeight": 0
+      "deployHeight": 2250
     }
   },
   "environment": "development",
