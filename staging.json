@@ -1,0 +1,206 @@
+{
+  "version": 0,
+  "networks": ["sepolia", "avail"],
+  "agent": {
+    "sepolia": {
+      "db": "db",
+      "kathy": {
+        "chat": {
+          "type": "default"
+        },
+        "enabled": false,
+        "interval": 500
+      },
+      "logging": {
+        "fmt": "json",
+        "level": "info"
+      },
+      "metrics": 9090,
+      "processor": {
+        "allowed": null,
+        "denied": null,
+        "enabled": false,
+        "interval": 20,
+        "subsidizedRemotes": []
+      },
+      "relayer": {
+        "enabled": false,
+        "interval": 20
+      },
+      "rpcStyle": "ethereum",
+      "updater": {
+        "enabled": false,
+        "interval": 20
+      },
+      "watcher": {
+        "enabled": false,
+        "interval": 20
+      }
+    },
+    "avail": {
+      "db": "db",
+      "kathy": {
+        "chat": {
+          "type": "default"
+        },
+        "enabled": false,
+        "interval": 20
+      },
+      "logging": {
+        "fmt": "json",
+        "level": "info"
+      },
+      "metrics": 9090,
+      "processor": {
+        "allowed": null,
+        "denied": null,
+        "enabled": true,
+        "interval": 20,
+        "subsidizedRemotes": ["sepolia"]
+      },
+      "relayer": {
+        "enabled": true,
+        "interval": 20
+      },
+      "rpcStyle": "substrate",
+      "updater": {
+        "enabled": true,
+        "interval": 20
+      },
+      "watcher": {
+        "enabled": true,
+        "interval": 20
+      }
+    }
+  },
+  "bridge": {
+    "sepolia": {
+      "bridgeRouter": {
+        "beacon": "0x0000000000000000000000000000000000000000",
+        "implementation": "0x0000000000000000000000000000000000000000",
+        "proxy": "0xbD824890A51ed8bda53F51F27303b14EFfEbC152"
+      },
+      "customs": [],
+      "deployHeight": 3549016,
+      "ethHelper": "0x0000000000000000000000000000000000000000",
+      "tokenRegistry": {
+        "beacon": "0x0000000000000000000000000000000000000000",
+        "implementation": "0x0000000000000000000000000000000000000000",
+        "proxy": "0x0000000000000000000000000000000000000000"
+      }
+    },
+    "avail": {
+      "deployHeight":0
+    }
+  },
+  "bridgeGui": {},
+  "core": {
+    "sepolia": {
+      "deployHeight": 3549016,
+      "governanceRouter": {
+        "beacon": "0x0000000000000000000000000000000000000000",
+        "implementation": "0x0000000000000000000000000000000000000000",
+        "proxy": "0x0000000000000000000000000000000000000000"
+      },
+      "home": {
+        "beacon": "0x0000000000000000000000000000000000000000",
+        "implementation": "0x0000000000000000000000000000000000000000",
+        "proxy": "0xbEA5247E7BB50fdaF1c98d6bf0fD234c29007605"
+      },
+      "replicas": {
+        "avail": {
+          "beacon": "0x0000000000000000000000000000000000000000",
+          "implementation": "0x0000000000000000000000000000000000000000",
+          "proxy": "0x36eFE7F03cae51E929c83821699B0d862BC389AB"
+        }
+      },
+      "updaterManager": "0x0000000000000000000000000000000000000000",
+      "upgradeBeaconController": "0x0000000000000000000000000000000000000000",
+      "xAppConnectionManager": "0x7D372111b915bA7A9EA03462CC7e65093502554c"
+    },
+    "avail": {
+      "deployHeight": 0
+    }
+  },
+  "environment": "development",
+  "gas": {
+    "sepolia": "evmDefault"
+  },
+  "protocol": {
+    "governor": {
+      "domain": 1000,
+      "id": "0x0000000000000000000000000000000000000000"
+    },
+    "networks": {
+      "sepolia": {
+        "bridgeConfiguration": {
+          "customs": [],
+          "deployGas": 85000000,
+          "mintGas": 20000000,
+          "weth": "0x0000000000000000000000000000000000000000"
+        },
+        "configuration": {
+          "governance": {
+            "recoveryManager": "0x0000000000000000000000000000000000000000",
+            "recoveryTimelock": 180
+          },
+          "maximumGas": 100000000,
+          "optimisticSeconds": 1800,
+          "processGas": 85000000,
+          "reserveGas": 1500000,
+          "updater": "0x695dFcFc604F9b2992642BDC5b173d1a1ed60b03",
+          "watchers": ["0x6795cb8AfBCFC011A6c38CB85fA7B1DCb2Bbf148"]
+        },
+        "connections": [],
+        "domain": 1000,
+        "name": "sepolia",
+        "specs": {
+          "blockExplorer": "https://sepolia.etherscan.io/",
+          "blockTime": 15,
+          "chainId": 11155111,
+          "confirmations": 4,
+          "finalizationBlocks": 30,
+          "indexPageSize": 2000,
+          "supports1559": true
+        }
+      },
+      "avail": {
+        "name": "avail",
+        "domain": 2000,
+        "connections": ["sepolia"],
+        "configuration": {
+          "optimisticSeconds": 1800,
+          "updater": "0x695dFcFc604F9b2992642BDC5b173d1a1ed60b03",
+          "watchers": ["0x6795cb8AfBCFC011A6c38CB85fA7B1DCb2Bbf148"],
+          "governance": {
+            "recoveryManager": "0x0000000000000000000000000000000000000000",
+            "recoveryTimelock": 86400
+          }
+        },
+        "specs": {
+          "chainId": 9001,
+          "blockTime": 20,
+          "finalizationBlocks": 10,
+          "supports1559": true,
+          "confirmations": 5,
+          "blockExplorer": "",
+          "indexPageSize": 100
+        },
+        "bridgeConfiguration": {
+          "weth": "0x0000000000000000000000000000000000000000",
+          "customs": []
+        }
+      }
+    }
+  },
+  "rpcs": {
+    "sepolia": [
+      "https://ethereum-sepolia-rpc.allthatnode.com/"
+    ],
+    "avail": []
+  },
+  "s3": {
+    "bucket": "",
+    "region": ""
+  }
+}
