@@ -78,10 +78,10 @@
       "bridgeRouter": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
-        "proxy": ""
+        "proxy": "0x305222c4DdB86FfA9fa9Aa0A479705577E3c4d33"
       },
       "customs": [],
-      "deployHeight": 4607467,
+      "deployHeight": 4652859,
       "ethHelper": "0x0000000000000000000000000000000000000000",
       "tokenRegistry": {
         "beacon": "0x0000000000000000000000000000000000000000",
@@ -96,7 +96,7 @@
   "bridgeGui": {},
   "core": {
     "sepolia": {
-      "deployHeight": 3549016,
+      "deployHeight": 4652859,
       "governanceRouter": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
@@ -105,18 +105,18 @@
       "home": {
         "beacon": "0x0000000000000000000000000000000000000000",
         "implementation": "0x0000000000000000000000000000000000000000",
-        "proxy": ""
+        "proxy": "0x76891A50Efb6d7F8D5113A16E942De23F3796FC9"
       },
       "replicas": {
         "avail": {
           "beacon": "0x0000000000000000000000000000000000000000",
           "implementation": "0x0000000000000000000000000000000000000000",
-          "proxy": ""
+          "proxy": "0x715789C12201aca96591A679F69bB5ce76dec6cb"
         }
       },
       "updaterManager": "0x0000000000000000000000000000000000000000",
       "upgradeBeaconController": "0x0000000000000000000000000000000000000000",
-      "xAppConnectionManager": ""
+      "xAppConnectionManager": "0x2158Cd46E42BD30BbcB70E5756bC690FA0cB7830"
     },
     "avail": {
       "deployHeight": 0
@@ -194,9 +194,7 @@
     }
   },
   "rpcs": {
-    "sepolia": [
-      "https://ethereum-sepolia-rpc.allthatnode.com/"
-    ],
+    "sepolia": [],
     "avail": []
   },
   "s3": {
